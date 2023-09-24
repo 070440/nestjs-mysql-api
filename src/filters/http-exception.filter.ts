@@ -19,6 +19,7 @@ export class HttpExceptionFilter implements ExceptionFilter {
     let resultMessage = exception.message;
     let resultCode = 1;
     let resultParams = {};
+    Logger.log(exception, '错误提示');
     try {
       const { code, message, ...oth } = JSON.parse(exception.message);
       resultMessage = message;

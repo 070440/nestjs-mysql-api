@@ -14,6 +14,7 @@ const isCache = true;
  * @return {*}
  */
 export function RedisCacheApi(exSecond: number = redisCacheConfig.redisEXSecond): any {
+  //装饰器聚合
   return applyDecorators(
     SetMetadata(REDIS_CACHE_KEY, isCache),
     SetMetadata(REDIS_CACHE_EX_SECOND_KEY, exSecond),

@@ -10,5 +10,6 @@ import { API_AUTH_KEY } from '@src/constants';
  * @return {*}
  */
 export function ApiAuth() {
+  //applyDecorators可以进行装饰器的聚合，setMetaData则是设置元数据
   return applyDecorators(SetMetadata(API_AUTH_KEY, true));
 }

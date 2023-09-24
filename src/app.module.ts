@@ -52,6 +52,7 @@ import { TransformInterceptor } from './interceptors/transform/transform.interce
     SharedModule,
   ],
   controllers: [],
+  //useClass处理自定义提供者的问题，因为在全局中注册，无法在module中拿到注册的东西
   providers: [
     {
       provide: APP_INTERCEPTOR,

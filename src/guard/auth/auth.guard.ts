@@ -41,6 +41,7 @@ export class AuthGuard implements CanActivate {
         if (accountInfo && isExpire) {
           const user: ICurrentUserType = { ...accountInfo, id: accountInfo.userId };
           request.user = accountInfo;
+          console.log(methodAuth, classAuth, 'Auth');
           if (methodAuth || classAuth) {
             const method = request.method;
             const url = request.url;
